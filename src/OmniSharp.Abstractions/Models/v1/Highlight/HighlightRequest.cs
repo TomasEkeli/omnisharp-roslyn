@@ -13,11 +13,13 @@ namespace OmniSharp.Models.Highlight
         /// </summary>
         [JsonConverter(typeof(ZeroBasedIndexConverter))]
         public int[] Lines { get; set; }
+
         /// <summary>
         ///   Specifies which projects to highlight for.
-        //    If none are given, highlight for all the projects.
+        ///   If none are given, highlight for all the projects.
         /// </summary>
         public string[] ProjectNames { get; set; }
+
         /// <summary>
         ///   Request specific classifications, if none are requested you will get them all.
         /// </summary>

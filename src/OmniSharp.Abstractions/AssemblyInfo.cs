@@ -10,10 +10,9 @@ using OmniSharp;
 [assembly: InternalsVisibleTo("OmniSharp.Tests" + OmniSharpPublicKey.Key)]
 [assembly: InternalsVisibleTo("OmniSharp.LanguageServerProtocol" + OmniSharpPublicKey.Key)]
 
-
 namespace OmniSharp
 {
-    public class OmniSharpPublicKey
+    public static class OmniSharpPublicKey
     {
         public const string Key = ", PublicKey=" + "0024000004800000940000000602000000240000525341310004000001000100917302efc152e6" +
                                                    "464679d4625bd9989e12d4662a9eaadf284d04992881c0e7b16e756e63ef200a02c4054d4d31e2" +

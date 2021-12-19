@@ -36,7 +36,7 @@ namespace OmniSharp.MSBuild.SolutionParsing
         public bool IsNotSupported =>
             ProjectTypeGuid.Equals(SolutionFolderGuid, StringComparison.OrdinalIgnoreCase) ||
             ProjectTypeGuid.Equals(LegacyAspNetWebsite, StringComparison.OrdinalIgnoreCase) ||
-            (RelativePath != null && RelativePath.ToLowerInvariant().StartsWith("http://"));
+            (RelativePath?.StartsWith("http://", StringComparison.InvariantCultureIgnoreCase) == true);
 
         private ProjectBlock(string projectTypeGuid, string projectName, string relativePath, string projectGuid, ImmutableArray<SectionBlock> sections)
         {

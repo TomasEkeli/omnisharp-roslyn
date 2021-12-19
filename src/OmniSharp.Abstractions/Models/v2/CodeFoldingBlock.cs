@@ -20,7 +20,7 @@
         public string Kind { get; }
     }
 
-    public class CodeFoldingBlockKinds
+    public static class CodeFoldingBlockKinds
     {
         public static readonly string Comment = nameof(Comment);
         public static readonly string Imports = nameof(Imports);

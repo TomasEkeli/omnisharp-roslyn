@@ -1,12 +1,10 @@
 using System;
-using Microsoft.Extensions.Logging;
 using OmniSharp.MSBuild.Discovery;
-using OmniSharp.Roslyn;
 using OmniSharp.Utilities;
 
 namespace OmniSharp
 {
-    public class HostHelpers
+    public static class HostHelpers
     {
         public static int Start(Func<int> action)
         {
@@ -18,8 +16,7 @@ namespace OmniSharp
                     // Ensure we have an acceptable lower limit on the threadpool size to avoid deadlocks and ThreadPool starvation.
                     const int MIN_WORKER_THREADS = 8;
 
-                    int currentWorkerThreads, currentCompletionPortThreads;
-                    System.Threading.ThreadPool.GetMinThreads(out currentWorkerThreads, out currentCompletionPortThreads);
+                    System.Threading.ThreadPool.GetMinThreads(out int currentWorkerThreads, out int currentCompletionPortThreads);
 
                     if (currentWorkerThreads < MIN_WORKER_THREADS)
                     {

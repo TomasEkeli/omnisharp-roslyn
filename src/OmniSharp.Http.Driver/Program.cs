@@ -4,7 +4,7 @@ using OmniSharp.Services;
 
 namespace OmniSharp.Http.Driver
 {
-    internal class Program
+    internal static class Program
     {
         static int Main(string[] args) => HostHelpers.Start(() =>
         {
@@ -25,6 +25,5 @@ namespace OmniSharp.Http.Driver
 
             return application.Execute(args);
         });
-
     }
 }

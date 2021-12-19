@@ -1,6 +1,6 @@
 ﻿namespace OmniSharp.Cake
 {
-    internal class Constants
+    internal static class Constants
     {
         public static class LanguageNames
         {

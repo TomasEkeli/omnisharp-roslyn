@@ -9,7 +9,6 @@ namespace OmniSharp.Mef
     public class ExportProjectSystemAttribute: ExportAttribute
     {
         public string Name { get; }
-        
         public ExportProjectSystemAttribute(string name) : base(typeof(IProjectSystem))
         {
             Name = name;

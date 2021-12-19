@@ -466,7 +466,7 @@ namespace OmniSharp.MSBuild
 
             // if the update was triggered by a change to an editorconfig file, only reload that analyzer config file
             // this will propagate a reanalysis of the project
-            if (changeTriggerFilePath != null && changeTriggerFilePath.ToLowerInvariant().EndsWith(".editorconfig"))
+            if (changeTriggerFilePath?.EndsWith(".editorconfig", StringComparison.InvariantCultureIgnoreCase) == true)
             {
                 UpdateAnalyzerConfigFile(project, changeTriggerFilePath);
                 return;
